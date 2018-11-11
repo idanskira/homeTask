@@ -1,0 +1,48 @@
+﻿@model MovieApplication.Models.movie
+
+@{
+    ViewBag.Title = "Movie Details";
+}
+
+<h2>Movie Details</h2>
+
+<div>
+    
+    <hr/>
+    <dl class="control-label col-md-2">
+        <dt>
+            <label>Title</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <br/>
+
+        <dt>
+            <label>Director</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direcror)
+        </dd>
+        <br/>
+
+        <dt>
+            <label>Genre</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <hr />
+        <div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+            </p>
+        </div>
+    </dl>
+    
+</div>
+

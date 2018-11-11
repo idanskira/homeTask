@@ -1,0 +1,60 @@
+﻿@model MovieApplication.Models.Rental
+
+@{
+    ViewBag.Title = "Rental Details";
+}
+
+<h2>Rental Details</h2>
+
+<div>
+    <hr />
+    <dl class="control-label col-md-2">
+        <dt>
+            <label>Date</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRented)
+        </dd>
+        <br />
+
+        <dt>
+            <label>First Name</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+        <br />
+
+        <dt>
+            <label>Last Name</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.LastName)
+        </dd>
+        <br />
+
+        <dt>
+            <label>Title</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movie.Title)
+        </dd>
+        <hr/>
+        
+            <div>
+                
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.RentalID }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+
+            </div>
+
+    </dl>
+   
+</div>
+
+
+

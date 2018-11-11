@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Movie Rental Managment";
+}
+
+<div class="jumbotron">
+    <h1>Movie Rental App</h1>
+    <p class="lead">Movies Rental Managment System.</p>
+    <p></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Customers","Index","Customers")</h2>
+        <p>
+
+        </p>Manage Customers List
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Movies","Index","Movies")</h2>
+        <p>Manage Movies List</p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Rentals","Index","Rentals")</h2>
+        <p>Manage Rentals List</p>
+        
+    </div>
+</div>

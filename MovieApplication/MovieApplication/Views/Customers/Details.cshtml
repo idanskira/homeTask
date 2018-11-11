@@ -1,0 +1,49 @@
+﻿@model MovieApplication.Models.Customer
+
+@{
+    ViewBag.Title = "Customer Details";
+}
+
+<h2>Customer Details</h2>
+
+<div>
+    
+    <hr />
+    <dl class="control-label col-md-2">
+        <dt>
+            <label>First Name</label>
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <br/>
+
+        <dt>
+            <label>Last Name</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <br/>
+
+        <dt>
+            <label>Phone</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        
+        <hr/>
+        <div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+            </p>
+
+        </div>
+    </dl>
+</div>

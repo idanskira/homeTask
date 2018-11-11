@@ -1,0 +1,50 @@
+﻿@model MovieApplication.Models.movie
+
+@{
+    ViewBag.Title = "Delete Movies";
+}
+
+<h2>Delete Movies</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl>
+        <dt>
+            <label>Title</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            <label>Director</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direcror)
+        </dd>
+
+        <dt>
+            <label>Genre</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+
+    </dl>
+
+
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div >
+        <input type="submit" value="Delete" class="btn btn-primary" />
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+    </div>
+}
